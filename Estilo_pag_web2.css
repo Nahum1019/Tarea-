@@ -1,0 +1,452 @@
+/* ============================================
+   Página Web Personalizada - Programación Web
+   ============================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #000000;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: #00e5ff;
+  color: #000000;
+  padding: 25px 40px;
+  text-align: center;
+  margin: 18px auto;
+  max-width: 1100px;
+  border-radius: 40px;
+}
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 6px;
+  font-style: italic;
+  font-weight: bold;
+}
+header p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* ===== NAVEGACIÓN ===== */
+nav {
+  background-color: #00cc00;
+  padding: 0;
+  margin: 0 auto 18px auto;
+  max-width: 1100px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.menu-toggle { display: none; }
+.menu-icon { display: none; }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav ul li { margin: 0; }
+nav ul li a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  padding: 14px 22px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+}
+nav ul li a:hover { background-color: rgba(0,0,0,0.15); }
+nav ul li a.activo { font-weight: bold; }
+
+/* ===== LAYOUT PRINCIPAL ===== */
+main {
+  max-width: 1100px;
+  margin: 0 auto 30px auto;
+  padding: 0 18px;
+}
+
+/* Secciones con layout de dos columnas (contenido + sidebar) */
+section {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  grid-template-rows: auto;
+  gap: 0;
+  margin-bottom: 18px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #ffff00;
+}
+
+/* Área principal izquierda */
+section > * {
+  grid-column: 1;
+}
+
+section h2 {
+  grid-column: 1 / -1;
+  background-color: #ffff00;
+  color: #000000;
+  padding: 16px 22px 8px 22px;
+  font-size: 1.4rem;
+  border-bottom: none;
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+section > p:first-of-type,
+section > p {
+  padding: 8px 22px;
+  background-color: #ffff00;
+  text-align: justify;
+  color: #000000;
+}
+
+h3 {
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 14px;
+}
+
+/* Bloques internos tipo "caja naranja" */
+.info-box {
+  background-color: #cc5500;
+  color: #000000;
+  border-radius: 12px;
+  margin: 10px 18px;
+  padding: 14px 16px;
+  grid-column: 1;
+}
+.info-box h3 {
+  padding: 0 0 6px 0;
+  font-weight: bold;
+  color: #000000;
+}
+.info-box p {
+  margin: 0;
+  text-align: justify;
+  color: #000000;
+}
+
+/* ===== SIDEBAR (columna derecha) ===== */
+.sidebar {
+  grid-column: 2;
+  grid-row: 1 / 99;
+  background-color: #1a00ff;
+  color: white;
+  padding: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.sidebar h3 {
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0;
+}
+.sidebar p {
+  color: white;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.sidebar input[type="search"], .sidebar input[type="text"] {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+}
+.sidebar button {
+  width: 100%;
+  padding: 8px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+}
+.sidebar button:hover { background-color: #333; }
+.sidebar a {
+  display: block;
+  color: white;
+  background-color: rgba(255,255,255,0.15);
+  padding: 8px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.sidebar a:hover { background-color: rgba(255,255,255,0.3); }
+
+/* ===== SECCIÓN INICIO - sin sidebar visible ===== */
+#inicio {
+  grid-template-columns: 1fr;
+  background-color: #ffff00;
+}
+#inicio .sidebar { display: none; }
+
+/* ===== TARJETAS ===== */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin: 10px 18px 18px 18px;
+  grid-column: 1;
+}
+.tarjeta {
+  background-color: #cc5500;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  color: #000000;
+  transition: transform 0.2s;
+}
+.tarjeta:hover { transform: translateY(-3px); }
+.tarjeta h3 { color: #000000; margin-bottom: 8px; padding: 0; font-size: 1rem; }
+.tarjeta p { color: #000000; font-size: 0.9rem; padding: 0; margin-bottom: 10px; }
+.tarjeta a {
+  display: inline-block;
+  background-color: #000000;
+  color: #ffff00;
+  padding: 6px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+.tarjeta a:hover { background-color: #333; }
+
+/* ===== GALERÍA ===== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin: 10px 18px 18px 18px;
+  grid-column: 1;
+}
+.galeria figure {
+  background-color: #cc5500;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+.galeria figure:hover { transform: scale(1.03); }
+.galeria img { width: 100%; height: 160px; object-fit: cover; display: block; }
+.galeria figcaption {
+  padding: 8px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #000000;
+  background-color: #cc5500;
+}
+
+.video-container {
+  margin: 10px 18px 18px 18px;
+  text-align: center;
+  grid-column: 1;
+}
+.video-container video {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* ===== TABLA ===== */
+table {
+  width: calc(100% - 36px);
+  margin: 10px 18px 18px 18px;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  grid-column: 1;
+}
+table th {
+  background-color: #003399;
+  color: white;
+  padding: 10px 12px;
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
+}
+table td { padding: 10px 12px; border-bottom: 1px solid #ddd; }
+table tr:hover { background-color: #ffffcc; }
+
+/* ===== FORMULARIOS ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 10px 18px 18px 18px;
+  grid-column: 1;
+}
+form label { font-weight: bold; color: #000000; }
+form input[type="text"],
+form input[type="email"],
+form input[type="search"],
+form textarea,
+form select {
+  padding: 9px;
+  border: 2px solid #999;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  background: #ffffcc;
+}
+form input:focus, form textarea:focus, form select:focus {
+  outline: none;
+  border-color: #cc5500;
+}
+form button {
+  background-color: #555;
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  align-self: flex-start;
+}
+form button:hover { background-color: #333; }
+
+/* ===== DESCARGAS ===== */
+.descargas-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin: 10px 18px 18px 18px;
+  grid-column: 1;
+}
+.descarga-item {
+  background-color: #cc5500;
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+  color: #000000;
+  transition: transform 0.2s;
+}
+.descarga-item:hover { transform: translateY(-3px); }
+.descarga-item .icono { font-size: 2rem; margin-bottom: 8px; }
+.descarga-item h3 { padding: 0; margin-bottom: 6px; color: #000; font-size: 1rem; }
+.descarga-item p { padding: 0; margin-bottom: 10px; font-size: 0.88rem; }
+.descarga-item a.btn-descarga {
+  display: inline-block;
+  background-color: #000000;
+  color: #ffff00;
+  padding: 8px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+.descarga-item a.btn-descarga:hover { background-color: #333; }
+
+/* ===== ENLACES EXTERNOS ===== */
+.enlaces-externos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin: 10px 18px 18px 18px;
+  grid-column: 1;
+}
+.enlaces-externos a {
+  display: block;
+  background-color: #003399;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.enlaces-externos a:hover { background-color: #0044cc; transform: translateY(-2px); }
+
+/* ===== LISTA INFO ===== */
+ul.lista-info {
+  margin: 8px 18px 18px 40px;
+  grid-column: 1;
+}
+ul.lista-info li { margin-bottom: 6px; }
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #cc00cc;
+  color: #000000;
+  text-align: center;
+  padding: 22px 20px;
+  margin: 0 auto 18px auto;
+  max-width: 1100px;
+  border-radius: 30px;
+}
+footer p { margin: 4px 0; text-align: center; color: #000000; }
+footer a { color: #000000; font-weight: bold; }
+footer a:hover { color: #333; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header { border-radius: 20px; margin: 10px; padding: 18px 16px; }
+  header h1 { font-size: 1.5rem; }
+
+  nav { border-radius: 20px; margin: 0 10px 12px 10px; }
+
+  .menu-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    cursor: pointer;
+    color: #000000;
+    font-weight: bold;
+    user-select: none;
+  }
+  .menu-icon span:not(.menu-text) {
+    display: block;
+    width: 22px;
+    height: 3px;
+    background: #000000;
+    border-radius: 2px;
+    margin: 3px 0;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .menu-icon .menu-text { margin-left: 6px; font-size: 1rem; }
+
+  nav ul { display: none; flex-direction: column; }
+  .menu-toggle:checked ~ ul { display: flex; }
+  .menu-toggle:checked ~ .menu-icon span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .menu-toggle:checked ~ .menu-icon span:nth-child(2) { opacity: 0; }
+  .menu-toggle:checked ~ .menu-icon span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  nav ul li a { text-align: center; padding: 12px; border-top: 1px solid rgba(0,0,0,0.15); }
+
+  main { padding: 0 10px; }
+
+  section {
+    grid-template-columns: 1fr;
+    border-radius: 14px;
+  }
+  .sidebar {
+    grid-column: 1;
+    grid-row: auto;
+    border-radius: 0 0 14px 14px;
+  }
+
+  footer { border-radius: 16px; margin: 0 10px 14px 10px; }
+}

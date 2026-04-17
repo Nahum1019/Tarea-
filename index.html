@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Mi Página Personal </title>
+
+  <link rel="stylesheet" href="Estilo_pag_web2.css" />
+
+</head>
+<body>
+
+  <header>
+            <h1>Nahum Alain Silva Olivera</h1>
+            <p>Estudiante de Ingenieria de Sistemas e Informatica</p>
+  </header>
+
+  <nav>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+      <span class="menu-text">Menú</span>
+    </label>
+    <ul>
+      <li><a href="#inicio" class="activo">Inicio</a></li>
+      <li><a href="#biografia">Biografía</a></li>
+      <li><a href="#familia">Familia</a></li>
+      <li><a href="#estudios">Estudios</a></li>
+      <li><a href="#materiales">Materiales</a></li>
+      <li><a href="#album">Álbum de Fotos</a></li>
+      <li><a href="#descargas">Descargas</a></li>
+      <li><a href="#info">Info Adicional</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- ============ INICIO ============ -->
+    <section id="inicio">
+      <h2>¡Bienvenido a mi sitio web!</h2>
+      <p>
+        Hola, soy estudiante del curso de <strong>Programación Web</strong> dictado por
+        el <strong>Mg. Elvio Tintaya Zegarra</strong>. En esta página personal podrás
+        conocer más sobre mí, mi familia, mis estudios y todos los materiales que
+        hemos trabajado durante el curso.
+      </p>
+      <p>
+        Este sitio fue desarrollado utilizando únicamente <strong>HTML5</strong> y
+        <strong>CSS3</strong>, aplicando enlaces internos con anclas, etiquetas
+        semánticas y un diseño responsive.
+      </p>
+
+      <h3>Explora las secciones del sitio</h3>
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <h3>📖 Biografía</h3>
+          <p>Conoce mi historia personal, datos y aspiraciones.</p>
+          <a href="#biografia">Ver biografía</a>
+        </div>
+        <div class="tarjeta">
+          <h3>👨‍👩‍👧 Familia</h3>
+          <p>Mi vida familiar y las personas que me acompañan.</p>
+          <a href="#familia">Ver familia</a>
+        </div>
+        <div class="tarjeta">
+          <h3>🎓 Estudios</h3>
+          <p>Mi trayectoria académica y experiencias de estudio.</p>
+          <a href="#estudios">Ver estudios</a>
+        </div>
+        <div class="tarjeta">
+          <h3>💻 Materiales</h3>
+          <p>Temas tratados en el curso de Programación Web.</p>
+          <a href="#materiales">Ver materiales</a>
+        </div>
+        <div class="tarjeta">
+          <h3>📸 Álbum de Fotos</h3>
+          <p>Galería con más de 10 imágenes y un video.</p>
+          <a href="#album">Ver álbum</a>
+        </div>
+        <div class="tarjeta">
+          <h3>⬇️ Descargas</h3>
+          <p>Descarga PDFs, ejemplos de código y recursos.</p>
+          <a href="#descargas">Ver descargas</a>
+        </div>
+      </div>
+
+      <h3>Enlaces externos de referencia</h3>
+      <div class="enlaces-externos">
+        <a href="https://developer.mozilla.org/es/" target="_blank" rel="noopener">MDN Web Docs</a>
+        <a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a>
+      </div>
+    </section>
+
+    <!-- ============ BIOGRAFÍA ============ -->
+    <section id="biografia">
+      <h2>Mi Biografía</h2>
+      <p>
+        Mi nombre es <strong>[Tu Nombre Completo]</strong>. Nací en
+        <strong>[Ciudad, País]</strong> el <strong>[fecha de nacimiento]</strong>.
+        Soy una persona dedicada, responsable y apasionada por la tecnología y el
+        desarrollo web.
+      </p>
+
+      <h3>Datos personales</h3>
+      <ul class="lista-info">
+        <li><strong>Nombre:</strong> [Tu nombre]</li>
+        <li><strong>Edad:</strong> [Tu edad] años</li>
+        <li><strong>Ciudad:</strong> [Tu ciudad]</li>
+        <li><strong>Carrera:</strong> [Tu carrera]</li>
+        <li><strong>Hobbies:</strong> Programar, leer, jugar fútbol, escuchar música</li>
+      </ul>
+
+      <h3>Mis aspiraciones</h3>
+      <p>
+        Mi meta es convertirme en un excelente desarrollador web full-stack y
+        aportar soluciones tecnológicas a mi comunidad.
+      </p>
+    </section>
+
+    <!-- ============ FAMILIA ============ -->
+    <section id="familia">
+      <h2>Mi Familia</h2>
+      <p>La familia es lo más importante en mi vida.</p>
+
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <h3>👨 Mi Papá</h3>
+          <p><strong>[Nombre del papá]</strong></p>
+          <p>Trabaja como [profesión]. Es mi mayor ejemplo de esfuerzo.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>👩 Mi Mamá</h3>
+          <p><strong>[Nombre de la mamá]</strong></p>
+          <p>Es [profesión]. La persona más cariñosa del mundo.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>👦 Hermano(a)</h3>
+          <p><strong>[Nombre del hermano]</strong></p>
+          <p>Tiene [edad] años y estudia [grado].</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ESTUDIOS ============ -->
+    <section id="estudios">
+      <h2>Mis Estudios</h2>
+
+      <h3>🏫 Educación Inicial</h3>
+      <p> Entre el año: 2009 - 2011 hice 3, 4 y 5 años en el jardin I.E. "644 - Inicial Pintacha".</p>
+
+      <h3>🏫 Educación Primaria</h3>
+      <p> Entre el año: 2012 - 2016 hice de 1ro a 5to grado en la I.E. "501224 - Nuestra Sra de Guadalupe".</p>
+      
+      <h3>🏫 Educación Primaria</h3>
+      <p> En el año 2017 hice solo 6to en la escuela I.E. "50312 - Quellomayo".</p>
+
+      <h3>🏫 Educación Secundaria</h3>
+      <p> Entre el año: 2018 - 2019 hice 1ro y 2do grado en el colegio I.E. "El Sr de Los Milagros"</p>
+
+      <h3>🏫 Educación Secundaria</h3>
+      <p> Entre el año: 2020 - 2022 termine el colegio en la I.E "General Ollanta"</p>
+
+      <h3>🎓 Educación superior</h3>
+      <p>Actualmente estudio la carrera de Ing. de Sistemas e Informatica en la
+         UTEA - "Universidad Tecnologica de los Andes"</p>
+    </section>
+
+    <!-- ============ MATERIALES ============ -->
+    <section id="materiales">
+      <h2>Materiales del Curso</h2>
+      <p>El curso de Programación Web abarca los fundamentos del desarrollo web moderno.</p>
+
+      <!-- CREAR TABLA -->
+<table border="1">
+<!-- Esto es para filas -->
+<tr>
+    <center><th> Año </th></center>
+    <center><th> Institucion  </th></center>
+    <center><th> Descripcion  </th></center>
+    <center><th> Nivel </th></center>
+</tr>
+<!-- Esto es para columnas  -->
+<tr>
+    <td> <center>2009 - 2011</center></td>
+    <td> I.E. "644 - Inicial Pintacha" </td>
+    <td> En este jardin hice 3, 4 y 5 años. </td>
+    <td> Inicial </td>
+</tr>
+<tr>
+    <td> <center>2012 - 2016</center></td>
+    <td> I.E. "501224 - Nuestra Sra de Guadalupe" </td>
+    <td> En esta escuela hice de 1ro a 5to grado </td>
+    <td> Primaria </td>
+</tr>
+<tr>
+    <td> <center>2017</center></td>
+    <td> I.E. "50312 - Quellomayo" </td>
+    <td> Y en esta escuela solo hice 6to grado </td>
+    <td> Primaria </td>
+</tr>
+<tr>
+    <td> <center>2018 - 2019</center></td>
+    <td> I.E. "El Sr de Los Milagros" </td>
+    <td> En este colegio hice 1ro y 2do grado </td>
+    <td> Secundaria </td>
+</tr>
+<tr>
+    <td> <center>2020 - 2022</center></td>
+    <td> I.E "General Ollanta" </td>
+    <td> En esteice de 3ro a 5to </td>
+    <td> Secundaria </td>
+</tr>
+<tr>
+    <td> <center>2024 - Actualidad</center></td>
+    <td> UTEA - "Universidad Tecnologica de los Andes"</td>
+    <td> En esta Universidad estudio la carrera de Ing. de Sistemas e Informatica,
+        y voy cursando el 6to semestre. </td>
+    <td> Superior </td>
+</tr>
+</table>
+    </section>
+
+    <!-- ============ ÁLBUM ============ -->
+    <section id="album">
+      <h2>Álbum de Fotos</h2>
+      <p>A continuación comparto algunas fotografías de mi y mi familia.</p>
+
+      <div class="galeria">
+        <figure><img src="nahum.jpeg" alt="Foto 1" /><figcaption>1. Paisaje natural</figcaption></figure>
+        <figure><img src="nahum2.jpeg" alt="Foto 2" /><figcaption>2. Vista de la ciudad</figcaption></figure>
+        <figure><img src="nahum3.jpeg" alt="Foto 3" /><figcaption>3. Reunión familiar</figcaption></figure>
+        <figure><img src="nahum4.jpeg" alt="Foto 4" /><figcaption>4. Universidad</figcaption></figure>
+        <figure><img src="nahum5.jpeg" alt="Foto 5" /><figcaption>5. Con mis amigos</figcaption></figure>
+        <figure><img src="rosamaria.jpeg" alt="Foto 6" /><figcaption>6. Viaje memorable</figcaption></figure>
+        <figure><img src="pamela.jpeg" alt="Foto 7" /><figcaption>7. Espacio de estudio</figcaption></figure>
+        <figure><img src="addys.jpeg" alt="Foto 8" /><figcaption>8. Practicando deporte</figcaption></figure>
+        <figure><img src="sobrinos.jpeg" alt="Foto 9" /><figcaption>9. Evento especial</figcaption></figure>
+        <figure><img src="familia.jpeg" alt="Foto 10" /><figcaption>10. Mi mascota</figcaption></figure>
+      </div>
+
+      <h3>Video de presentación</h3>
+      <div class="video-container">
+        <video controls width="600" poster="https://picsum.photos/seed/poster/600/340">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+          Tu navegador no soporta la etiqueta de video.
+        </video>
+      </div>
+    </section>
+
+    <!-- ============ DESCARGAS ============ -->
+    <section id="descargas">
+      <h2>Descargas</h2>
+      <p>Aquí puedes descargar los materiales del curso, ejemplos de código y otros recursos útiles.</p>
+
+      <div class="descargas-lista">
+        <div class="descarga-item">
+          <div class="icono">📄</div>
+          <h3>Manual de HTML5</h3>
+          <p>Guía completa de etiquetas y atributos.</p>
+          <a class="btn-descarga" href="recursos/manual-html5.pdf" download>Descargar PDF</a>
+        </div>
+        <div class="descarga-item">
+          <div class="icono">🎨</div>
+          <h3>Manual de CSS3</h3>
+          <p>Selectores, propiedades y diseño.</p>
+          <a class="btn-descarga" href="recursos/manual-css3.pdf" download>Descargar PDF</a>
+        </div>
+        <div class="descarga-item">
+          <div class="icono">💻</div>
+          <h3>Ejemplos de Código</h3>
+          <p>Código fuente visto en clase.</p>
+          <a class="btn-descarga" href="recursos/ejemplos-codigo.zip" download>Descargar ZIP</a>
+        </div>
+        <div class="descarga-item">
+          <div class="icono">📋</div>
+          <h3>Plantilla de Proyecto</h3>
+          <p>Base para iniciar un proyecto.</p>
+          <a class="btn-descarga" href="recursos/plantilla-proyecto.zip" download>Descargar ZIP</a>
+        </div>
+        <div class="descarga-item">
+          <div class="icono">📝</div>
+          <h3>Guía de Formularios</h3>
+          <p>Crear formularios profesionales.</p>
+          <a class="btn-descarga" href="recursos/guia-formularios.pdf" download>Descargar PDF</a>
+        </div>
+        <div class="descarga-item">
+          <div class="icono">📊</div>
+          <h3>Sílabo del Curso</h3>
+          <p>Documento oficial del curso.</p>
+          <a class="btn-descarga" href="recursos/silabo.pdf" download>Descargar PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INFO ADICIONAL ============ -->
+    <section id="info">
+      <h2>Información Adicional</h2>
+      <p>Sección de contacto y formulario de búsqueda.</p>
+
+      <h3>🔍 Búsqueda en el sitio</h3>
+      <form>
+        <label for="buscar">Buscar contenido:</label>
+        <input type="search" id="buscar" name="buscar" placeholder="Escribe lo que buscas..." />
+        <button type="submit">Buscar</button>
+      </form>
+
+      <h3>📩 Formulario de contacto</h3>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="asunto">Asunto:</label>
+        <select id="asunto" name="asunto">
+          <option>Consulta general</option>
+          <option>Sugerencia</option>
+          <option>Colaboración</option>
+        </select>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+
+      <h3>🌐 Mis redes sociales</h3>
+      <div class="enlaces-externos">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Mi Página Personal | Curso de Programación Web</p>
+    <p><a href="#inicio">Volver al inicio</a></p>
+  </footer>
+
+</body>
+</html>
